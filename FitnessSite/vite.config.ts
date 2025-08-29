@@ -12,10 +12,15 @@ export default defineConfig({
   plugins: [
     react(),
     // Overlay de errores solo en desarrollo
-    ...(!isProd ? [ (await import("@replit/vite-plugin-runtime-error-modal")).default?.() ?? (await import("@replit/vite-plugin-runtime-error-modal")).default ] : []),
+    ...(!isProd
+      ? [
+          (await import("@replit/vite-plugin-runtime-error-modal")).default?.() ??
+            (await import("@replit/vite-plugin-runtime-error-modal")).default,
+        ]
+      : []),
     // Cartographer de Replit solo en desarrollo y si existe REPL_ID
     ...(!isProd && process.env.REPL_ID
-      ? [ (await import("@replit/vite-plugin-cartographer")).then(m => m.cartographer()) ]
+      ? [(await import("@replit/vite-plugin-cartographer")).then((m) => m.cartographer())]
       : []),
   ],
 
@@ -32,6 +37,23 @@ export default defineConfig({
     // ⚠️ Clave: salimos de /client y generamos en /dist (raíz del proyecto)
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
+
+    // 📦 Mejor división de bundles (split vendors)
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("react") || id.includes("react-dom")) return "react";
+            if (id.includes("framer-motion")) return "motion";
+            if (id.includes("wouter")) return "router";
+            return "vendor";
+          }
+        },
+      },
+    },
+
+    // ⚠️ Subimos el límite del warning de tamaño a 1 MB
+    chunkSizeWarningLimit: 1024,
   },
 
   server: {
@@ -41,4 +63,5 @@ export default defineConfig({
     },
   },
 });
+
 
