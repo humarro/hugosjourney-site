@@ -53,7 +53,7 @@ export default function HeroSection() {
           >
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500"
+                src="https://www.instagram.com/p/DAyuOfAIY5B/?img_index=2"
                 alt="Pablo Sanro - Entrenador Personal"
                 className="rounded-2xl shadow-2xl w-80 h-96 object-cover animate-float"
                 data-testid="img-hero-photo"
