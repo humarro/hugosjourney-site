@@ -76,7 +76,7 @@ export default function AboutSection() {
             className="lg:pl-12"
           >
             <img
-              src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=700"
+              src="https://yt3.googleusercontent.com/2zv8dW2MtRCOcfvCt0SPus-ErMCVolE09RDTWQTbiCWZHICzFafUPO7jMKc_oL9TwDdb7lqqTA=s900-c-k-c0x00ffffff-no-rj"
               alt="Pablo Sanro entrenando"
               className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               data-testid="img-about-photo"
