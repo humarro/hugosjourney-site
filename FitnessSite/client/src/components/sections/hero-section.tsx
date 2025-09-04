@@ -53,7 +53,7 @@ export default function HeroSection() {
           >
             <div className="relative">
               <img
-                src="pablo_medalla.png"
+                src="https://tse2.mm.bing.net/th/id/OIP.EeKp8O7tZ-OxQ4AjJmKvgwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
                 alt="Pablo Sanro - Entrenador Personal"
                 className="rounded-2xl shadow-2xl w-80 h-96 object-cover animate-float"
                 data-testid="img-hero-photo"
