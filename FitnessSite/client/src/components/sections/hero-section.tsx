@@ -53,7 +53,7 @@ export default function HeroSection() {
           >
             <div className="relative">
               <img
-                src="https://www.instagram.com/p/DAyuOfAIY5B/?img_index=2"
+                src="pablo_medalla.png"
                 alt="Pablo Sanro - Entrenador Personal"
                 className="rounded-2xl shadow-2xl w-80 h-96 object-cover animate-float"
                 data-testid="img-hero-photo"
